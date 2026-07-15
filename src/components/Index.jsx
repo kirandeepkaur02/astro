@@ -14,24 +14,24 @@ import FAQ from './FAQ'
 import Footer from './Footer'
 
 const Index = () => {
-  return (
-   <div className="relative min-h">
-       <CosmicBackground />
-      <Navbar />
-      <main>
-        <Hero />
-        <TodayStrip />
-        <FeaturedAstrologers />
-        <ZodiacGrid />
-        <Services />
-        <WhyUs />
-        <Reviews />
-        <Blog />
-        <NewsLetter />
-        <FAQ />
-      </main>
-      <Footer />
-   </div>
-  )
+    return (
+        <div className="relative min-h-dvh overflow-x-hidden">
+            <CosmicBackground />
+            <Navbar />
+            <main>
+                <Hero />
+                {/* <TodayStrip /> */}
+                {/* <FeaturedAstrologers />
+                <ZodiacGrid />
+                <Services />
+                <WhyUs />
+                <Reviews />
+                <Blog />
+                <NewsLetter />
+                <FAQ /> */}
+            </main> 
+            {/* {/* <Footer />} */}
+        </div>
+    )
 }
 export default Index
