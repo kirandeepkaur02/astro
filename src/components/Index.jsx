@@ -21,7 +21,6 @@ const Index = () => {
             <main>
                 <Hero />
                 <TodayStrip />
-               
                 <FeaturedAstrologers />
                 <ZodiacGrid />
                 <Services />
