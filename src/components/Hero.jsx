@@ -10,7 +10,7 @@ const zodiacGlyphs = ["♈", "♉", "♊", "♋", "♌", "♍", "♎", "♏", "�
   return (
     <div className="relative overflow-hidden  min-h-screen pt-16 pb-16 sm:pt-24 sm:pb-32">
       {/* hero image wash */}
-     <div
+     {/* <div
         aria-hidden
         className="absolute inset-0 -z-10 "
         style={{
@@ -18,7 +18,7 @@ const zodiacGlyphs = ["♈", "♉", "♊", "♋", "♌", "♍", "♎", "♏", "�
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
-      />
+      /> */}
  {/* floating zodiac glyphs */}
       {zodiacGlyphs.map((g, i) => (
         <span

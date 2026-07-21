@@ -15,22 +15,23 @@ import Footer from './Footer'
 
 const Index = () => {
     return (
-        <div className="relative min-h-dvh overflow-x-hidden">
+        <div className="relative  overflow-x-hidden">
             <CosmicBackground />
             <Navbar />
             <main>
                 <Hero />
-                {/* <TodayStrip /> */}
-                {/* <FeaturedAstrologers />
+                <TodayStrip />
+               
+                <FeaturedAstrologers />
                 <ZodiacGrid />
                 <Services />
                 <WhyUs />
                 <Reviews />
                 <Blog />
                 <NewsLetter />
-                <FAQ /> */}
+                <FAQ />
             </main> 
-            {/* {/* <Footer />} */}
+             <Footer />
         </div>
     )
 }

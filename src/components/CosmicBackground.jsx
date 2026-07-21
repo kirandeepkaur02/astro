@@ -1,5 +1,6 @@
 import React from 'react'
 import { useEffect, useState } from "react";
+import cosmichero from "../assets/cosmichero.jpg";
 
 const CosmicBackground = () => {
 
@@ -26,6 +27,12 @@ const CosmicBackground = () => {
       <div
         aria-hidden
         className="pointer-events-none fixed inset-0 -z-10 overflow-hidden"
+        style={{
+          backgroundImage: `url(${cosmichero})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+        }}
       >
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,oklch(0.36_0.18_300/0.5),transparent_60%)]" />
       </div>
@@ -36,6 +43,12 @@ const CosmicBackground = () => {
    <div
       aria-hidden
       className="pointer-events-none fixed inset-0 -z-10 overflow-hidden"
+      style={{
+        backgroundImage: `url(${cosmichero})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+      }}
     >
       {/* Nebula Background */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,oklch(0.36_0.18_300/0.5),transparent_60%)]" />
