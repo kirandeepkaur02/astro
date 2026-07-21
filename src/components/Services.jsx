@@ -32,7 +32,7 @@ const services = [
             <a
               key={s.name}
               href="#"
-              className="group relative overflow-hidden rounded-2xl border border-yellow-400/5 bg-white/10 p-6 transition-all hover:-translate-y-1 hover:border-yellow-400 hover:bg-white/[0.06]"
+              className="group glass relative overflow-hidden rounded-2xl border border-yellow-400/5  p-6 transition-all hover:-translate-y-1 hover:border-yellow-400 hover:bg-white/[0.06]"
             >
               <div className="absolute -right-8 -top-8 h-32 w-32 rounded-full bg-[color:var(--cosmic)]/30 blur-3xl opacity-0 transition-opacity group-hover:opacity-100" />
               <div className="mb-4 grid h-12 w-12 place-items-center rounded-xl gradient-cosmic text-yellow-400 shadow-[var(--shadow-cosmic)]">
