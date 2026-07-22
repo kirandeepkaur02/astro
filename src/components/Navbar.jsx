@@ -67,12 +67,13 @@ export default function Navbar() {
               Sign In
             </button>
 
-            <button
+            <Link
+              to="/talk"
               className="flex items-center gap-2 rounded-full bg-yellow-400 px-5 py-2 font-medium text-black transition hover:bg-yellow-300"
             >
               <Sparkles size={16} />
               Talk to Astrologer
-            </button>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -122,15 +123,18 @@ export default function Navbar() {
 
             <div className="mt-4 flex gap-2">
               <button
-               
                 className="flex-1 rounded-full border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-black"
               >
                 Sign In
               </button>
 
-              <button className="flex-1 rounded-full bg-yellow-400 text-black hover:bg-yellow-300">
+              <Link
+                to="/talk"
+                onClick={() => setOpen(false)}
+                className="flex-1 rounded-full bg-yellow-400 text-black hover:bg-yellow-300 text-center py-2"
+              >
                 Consult Now
-              </button>
+              </Link>
             </div>
           </div>
         )}

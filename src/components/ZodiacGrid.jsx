@@ -1,23 +1,36 @@
 import React from 'react'
 import {ArrowRight } from "lucide-react";
+import virgo from "../assets/signs/virgo.png";
+import libra from "../assets/signs/libra.png";
+import scorpio from "../assets/signs/scorpio.png";
+import sagittarius from "../assets/signs/sagittarius.png";
+import capricorn from "../assets/signs/capricorn.png";
+import aquarius from "../assets/signs/aquarius.png";
+import pisces from "../assets/signs/pisces.png";
+import aries from "../assets/signs/aries.png";
+import taurus from "../assets/signs/taurus.png";
+import gemini from "../assets/signs/gemini.png";
+import leo from "../assets/signs/leo.png";
+import cancer from "../assets/signs/cancer.png";
 
 
 const ZodiacGrid = () => {
 
 const zodiacs = [
-  { name: "Aries", glyph: "♈", date: "Mar 21 – Apr 19" },
-  { name: "Taurus", glyph: "♉", date: "Apr 20 – May 20" },
-  { name: "Gemini", glyph: "♊", date: "May 21 – Jun 20" },
-  { name: "Cancer", glyph: "♋", date: "Jun 21 – Jul 22" },
-  { name: "Leo", glyph: "♌", date: "Jul 23 – Aug 22" },
-  { name: "Virgo", glyph: "♍", date: "Aug 23 – Sep 22" },
-  { name: "Libra", glyph: "♎", date: "Sep 23 – Oct 22" },
-  { name: "Scorpio", glyph: "♏", date: "Oct 23 – Nov 21" },
-  { name: "Sagittarius", glyph: "♐", date: "Nov 22 – Dec 21" },
-  { name: "Capricorn", glyph: "♑", date: "Dec 22 – Jan 19" },
-  { name: "Aquarius", glyph: "♒", date: "Jan 20 – Feb 18" },
-  { name: "Pisces", glyph: "♓", date: "Feb 19 – Mar 20" },
+  { name: "Aries", image: aries, date: "Mar 21 – Apr 19" },
+  { name: "Taurus", image: taurus, date: "Apr 20 – May 20" },
+  { name: "Gemini", image: gemini, date: "May 21 – Jun 20" },
+  { name: "Cancer", image: cancer, date: "Jun 21 – Jul 22" },
+  { name: "Leo", image: leo, date: "Jul 23 – Aug 22" },
+  { name: "Virgo", image: virgo, date: "Aug 23 – Sep 22" },
+  { name: "Libra", image: libra, date: "Sep 23 – Oct 22" },
+  { name: "Scorpio", image: scorpio, date: "Oct 23 – Nov 21" },
+  { name: "Sagittarius", image: sagittarius, date: "Nov 22 – Dec 21" },
+  { name: "Capricorn", image: capricorn, date: "Dec 22 – Jan 19" },
+  { name: "Aquarius", image: aquarius, date: "Jan 20 – Feb 18" },
+  { name: "Pisces", image: pisces, date: "Feb 19 – Mar 20" },
 ];
+
 
   return (
     <div id="zodiac" className="relative py-20 sm:py-28">
@@ -34,7 +47,11 @@ const zodiacs = [
               className="group cosmic-card bg-white/15 backdrop:blur gradient-border-gold relative overflow-hidden rounded-2xl p-5 text-left transition-transform hover:-translate-y-1"
             >
               <div className="mb-4 grid h-14 w-14 place-items-center rounded-full gradient-cosmic text-2xl text-[color:var(--gold)] shadow-[var(--shadow-cosmic)] transition-transform group-hover:scale-110">
-                {z.glyph}
+                <img
+    src={z.image}
+    alt={z.name}
+    className="h-10 w-10 object-contain"
+  />
               </div>
               <div className="font-serif text-lg text-amber-50 font-semibold">
                 {z.name}

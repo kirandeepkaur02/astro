@@ -75,7 +75,7 @@ const FeaturedAstrologers = () => {
             title="Featured Astrologers"
             desc="Verified experts. Talk, chat or video call in seconds."
           />
-          <button className="rounded-full flex items-center gap-2  bg-transparent px-5 py-2 text-orange-400 font-medium border border-orange-400 transition">
+          <button className="rounded-full flex items-center gap-2  bg-transparent px-5 py-2 text-yellow-400 font-medium border border-yellow-400 transition">
             View all <ArrowRight className="h-4 w-4" />
           </button>
        </div>
@@ -91,8 +91,8 @@ const FeaturedAstrologers = () => {
               </span>
               <div className="relative mx-auto mb-4">
 
-                <div className="animate-spin-slow absolute inset-0 rounded-full border border-dashed border-orange-400" />
-                <div className="grid h-24 w-24 place-items-center rounded-full bg-purple-950 font-serif text-2xl font-bold text-orange-400 shadow-[var(--shadow-cosmic)]">
+                <div className="animate-spin-slow absolute inset-0 rounded-full border border-dashed border-yellow-400" />
+                <div className="grid h-24 w-24 place-items-center rounded-full bg-purple-950 font-serif text-2xl font-bold text-yellow-400 shadow-[var(--shadow-cosmic)]">
                   {a.initials}
                 </div>
               </div>
@@ -100,8 +100,8 @@ const FeaturedAstrologers = () => {
                 {a.name}
               </h3>
               <div className="mt-1 text-center text-xs text-white/60">{a.skill}</div>
-              <div className="mt-3 flex items-center justify-center gap-1 text-sm text-orange-400">
-                <Star className="h-3.5 w-3.5 fill-orange-400 " /> {a.rating}
+              <div className="mt-3 flex items-center justify-center gap-1 text-sm text-yellow-400">
+                <Star className="h-3.5 w-3.5 fill-yellow-400 " /> {a.rating}
                 <span className="mx-2 h-3 w-px bg-white/20" />
                 <span className="text-white/70">{a.exp} yrs</span>
               </div>
@@ -124,7 +124,7 @@ const FeaturedAstrologers = () => {
                 <button className="grid h-10 place-items-center rounded-xl border border-white/10 bg-white/5 text-white/80 hover:bg-white/10" aria-label="Call">
                   <Phone className="h-4 w-4" />
                 </button>
-                <button className="grid h-10 place-items-center rounded-xl bg-orange-400 text-black" aria-label="Video">
+                <button className="grid h-10 place-items-center rounded-xl bg-yellow-400 text-black" aria-label="Video">
                   <Video className="h-4 w-4" />
                 </button>
               </div>
@@ -149,7 +149,7 @@ const SectionTitle = ({
       }`}
     >
       {eyebrow && (
-        <span className="inline-block text-xs font-semibold uppercase tracking-[0.35em] text-orange-400">
+        <span className="inline-block text-xs font-semibold uppercase tracking-[0.35em] text-yellow-400">
           {eyebrow}
         </span>
       )}

@@ -2,10 +2,38 @@ import React from 'react'
 import { motion } from "motion/react";
 import { ArrowRight, PlayCircle, Sparkles, Star } from "lucide-react";
 import cosmichero from "../assets/cosmichero.jpg";
+import virgo from "../assets/signs/virgo.png";
+import libra from "../assets/signs/libra.png";
+import scorpio from "../assets/signs/scorpio.png";
+import sagittarius from "../assets/signs/sagittarius.png";
+import capricorn from "../assets/signs/capricorn.png";
+import aquarius from "../assets/signs/aquarius.png";
+import pisces from "../assets/signs/pisces.png";
+import aries from "../assets/signs/aries.png";
+import taurus from "../assets/signs/taurus.png";
+import gemini from "../assets/signs/gemini.png";
+import leo from "../assets/signs/leo.png";
+import cancer from "../assets/signs/cancer.png";
+
 
 const Hero = () => {
 
 const zodiacGlyphs = ["♈", "♉", "♊", "♋", "♌", "♍", "♎", "♏", "♐", "♑", "♒", "♓"];
+
+const zodiacImages = [
+  aries,
+  taurus,
+  gemini,
+  cancer,
+  leo,
+  virgo,
+  libra,
+  scorpio,
+  sagittarius,
+  capricorn,
+  aquarius,
+  pisces,
+];
 
   return (
     <div className="relative overflow-hidden  min-h-screen pt-16 pb-16 sm:pt-24 sm:pb-32">
@@ -36,15 +64,14 @@ const zodiacGlyphs = ["♈", "♉", "♊", "♋", "♌", "♍", "♎", "♏", "�
         </span>
       ))}
 
-
-       <div className="mx-auto grid max-w-7xl  gap-14 px-4 sm:px-6 lg:grid-cols-[1.15fr_1fr] lg:items-center lg:px-8">
+    <div className="mx-auto grid max-w-7xl  gap-14 px-4 sm:px-6 lg:grid-cols-[1.15fr_1fr] lg:items-center lg:px-8">
 
            <div className="relative">
               <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
-            className="inline-flex items-center gap-2 rounded-full border border-(--gold)/30 bg-white/5 px-4 py-1.5 text-xs uppercase tracking-[0.25em] text-orange-400  backdrop-blur"
+            className="inline-flex items-center gap-2 rounded-full border border-(--gold)/30 bg-white/5 px-4 py-1.5 text-xs uppercase tracking-[0.25em] text-yellow-400  backdrop-blur"
           > 
             <Sparkles className="h-3.5 w-3.5" /> Award‑winning astrology, since 1998
           </motion.div>
@@ -105,23 +132,37 @@ const zodiacGlyphs = ["♈", "♉", "♊", "♋", "♌", "♍", "♎", "♏", "�
            {/* Moon + orbit */}
            <div className="relative mx-auto aspect-square w-full max-w-md">
            <div className="absolute inset-0 grid place-items-center">
-            <div className="animate-spin-slow relative h-[92%] w-[92%] rounded-full border border-dashed border-amber-400">
-              {zodiacGlyphs.slice(0, 8).map((g, i) => {
-                const angle = (i / 8) * Math.PI * 2;
+          <motion.div
+  animate={{ rotate: 360 }}
+  transition={{
+    duration: 25,
+    repeat: Infinity,
+    ease: "linear",
+  }}
+             className=" relative h-[92%] w-[92%] rounded-full border border-dashed border-amber-400">
+             {zodiacImages.map((img, i) => {
+  const angle = (i / zodiacImages.length) * Math.PI * 2;
+
+  // radius from center (in %)
+  const radius = 47;
                 return (
-                  <span
-                    key={g}
-                    className="absolute -translate-x-1/2 -translate-y-1/2 font-serif text-sm text-amber-400"
-                    style={{
-                      left: `${50 + 50 * Math.cos(angle)}%`,
-                      top: `${50 + 50 * Math.sin(angle)}%`,
-                    }}
-                  >
-                    {g}
-                  </span>
+                 <motion.img
+      key={i}
+      src={img}
+      alt=""
+      className="absolute h-10 w-10 -translate-x-1/2 -translate-y-1/2 object-contain drop-shadow-[0_0_10px_rgba(251,191,36,0.6)]"
+      style={{
+        left: `${50 + radius * Math.cos(angle)}%`,
+        top: `${50 + radius * Math.sin(angle)}%`,
+      }}
+      whileHover={{
+        scale: 1.2,
+        rotate: 10,
+      }}
+    />
                 );
               })}
-            </div>
+          </motion.div> 
           </div>     
           <div className="absolute inset-0 grid place-items-center">
             <motion.div
@@ -135,6 +176,5 @@ const zodiacGlyphs = ["♈", "♉", "♊", "♋", "♌", "♍", "♎", "♏", "�
            </div>
   </div>
  </div>
-  )
-}
-export default Hero
+)} 
+export default Hero 

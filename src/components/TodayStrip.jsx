@@ -37,7 +37,7 @@ const TodayStrip = () => {
 
 
           <div className="glass font-serif gradient-border-gold rounded-3xl p-6 sm:p-8 shadow-xl">
-            <span className="inline-flex  font-serif rounded-full  px-4 py-1 text-xs font-semibold uppercase tracking-[0.3em] text-orange-400">
+            <span className="inline-flex  font-serif rounded-full  px-4 py-1 text-xs font-semibold uppercase tracking-[0.3em] text-yellow-400">
               Today's Horoscope
             </span>
 
@@ -77,7 +77,7 @@ const TodayStrip = () => {
               <button
                 variant="gold"
                 size="lg"
-                className="w-full text-black bg-orange-400 px-4 py-3 sm:w-auto rounded-full"
+                className="w-full text-black bg-yellow-400 px-4 py-3 sm:w-auto rounded-full"
               >
                 Full Reading
               </button>
@@ -96,7 +96,7 @@ const TodayStrip = () => {
           {/* Panchang Card */}
           <div className="glass rounded-3xl p-6 sm:p-8 shadow-xl">
 
-            <span className="inline-flex rounded-full font-serif  px-4 py-1 text-xs font-semibold uppercase tracking-[0.3em] text-orange-400">
+            <span className="inline-flex rounded-full font-serif  px-4 py-1 text-xs font-semibold uppercase tracking-[0.3em] text-yellow-400">
               Today's Panchang
             </span>
 
@@ -114,8 +114,8 @@ const TodayStrip = () => {
                     key={item.label}
                     className="group flex items-center gap-4 rounded-2xl border border-white/10 bg-white/5 p-2 transition-all duration-300 hover:-translate-y-1 hover:border-[color:var(--gold)]/40 hover:bg-white/10"
                   >
-                    <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[image:var(--gradient-cosmic)] text-[color:var(--gold)] transition-transform duration-300 group-hover:rotate-6 group-hover:scale-110">
-                      <Icon className="h-10 w-10 bg-purple-950   text-orange-400  px-2 py-2 rounded-2xl"/>
+                    <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[image:var(--gradient-cosmic)] text-yellow-400 transition-transform duration-300 group-hover:rotate-6 group-hover:scale-110">
+                      <Icon className="h-10 w-10 bg-purple-950   text-yellow-400  px-2 py-2 rounded-2xl"/>
                     </div>
 
                     <div>
